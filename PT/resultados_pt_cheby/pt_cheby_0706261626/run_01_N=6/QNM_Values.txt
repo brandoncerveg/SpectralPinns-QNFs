@@ -1,0 +1,43 @@
+Argmin
+Re:0.5304011117382664
+Im:-6.432212174167332
+loss:1.1437e-03
+
+Avg10%
+Re:0.5304011117382665
+Im:-6.432212174167331
+sigma:0.000000,0.000000
+
+Hiperparametros
+potential:Pöschl-Teller
+architecture:Chebyshev+HardMask
+V0:1.0
+a:1.0
+y0:0.0
+yf:1.0
+n_train:100
+neurons:0
+epochs:500
+learning_rate:0.005
+minibatch:1
+optimizer:HAdamD + L-BFGS
+activation:Chebyshev T_k
+device:cpu
+amp:False
+losses:['PDE(MAE)', 'Anticollapse', 'Barriers', 'HardMask(phi(0)=1)', 'Boundary(phi(1)=(-1)^N)']
+grid:Chebyshev-Gauss-Lobatto
+base_degree:0
+N:6
+run:1
+degree:6
+poly_deg:6
+epochs_used:500
+
+Coeficientes Chebyshev
+A0=-0.56701667+-0.01639729i
+A1=0.00026948+0.00055404i
+A2=0.48783394+0.00304529i
+A3=0.00006696+0.00017856i
+A4=0.07757396+0.01282291i
+A5=0.00000143+0.00001451i
+A6=0.00194664+0.00127622i

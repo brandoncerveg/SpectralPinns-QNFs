@@ -1,0 +1,66 @@
+============================================================
+  DIAGNÓSTICO CHEBYSHEV+HARDMASK — Pöschl-Teller, Modo N=6
+  Arquitectura: Chebyshev T_k(2ξ-1) + Hard mask (eᶻ−1)
+  Optimizador: HAdamD + L-BFGS
+============================================================
+
+  ── ANALÍTICO ──
+  ω analítico: 0.500000 + -6.500000i
+
+  ── INICIALIZACIÓN ──
+  ω init     : 0.562772 + -6.542269i
+  Coefs init (7):
+    A0 = -0.02663761 + 0.01928191i
+    A1 = -0.03311017 + -0.03946036i
+    A2 = -0.02162085 + 0.03049849i
+    A3 = -0.04948439 + -0.01572178i
+    A4 = 0.03857110 + -0.02466842i
+    A5 = 0.04394244 + 0.03510070i
+    A6 = -0.02896476 + -0.04519342i
+
+  ── RESULTADO ──
+  w argmin : 0.413284+-6.371924i [ep 345]
+  w avg10% : 0.413284+-6.371924i  s=(0.0000,0.0000)
+  Error Re : 0.086716
+  Error Im : 0.128076
+  Consist  : ✓
+  Loss PDE : 1.9186e-04
+  Veredicto: NO convergio (PDE alta)
+
+  Coeficientes Chebyshev finales:
+    A0 = -0.56491629 + -0.01316756i
+    A1 = -0.00003481 + 0.00007675i
+    A2 = 0.48697216 + 0.00233227i
+    A3 = -0.00001239 + 0.00002258i
+    A4 = 0.07600558 + 0.00998079i
+    A5 = -0.00000122 + 0.00000143i
+    A6 = 0.00189013 + 0.00095528i
+
+  Barreras Im conocidas: [-0.5, -1.5, -2.5, -3.5, -4.5, -5.5]
+  Tiempo: 0.05 min
+
+  Hiperparámetros:
+    potential: Pöschl-Teller
+    architecture: Chebyshev+HardMask
+    V0: 1.0
+    a: 1.0
+    y0: 0.0
+    yf: 1.0
+    n_train: 100
+    neurons: 0
+    epochs: 500
+    learning_rate: 0.005
+    minibatch: 1
+    optimizer: HAdamD + L-BFGS
+    activation: Chebyshev T_k
+    device: cpu
+    amp: False
+    losses: ['PDE(MAE)', 'Anticollapse', 'Barriers', 'HardMask(phi(0)=1)', 'Boundary(phi(1)=(-1)^N)']
+    grid: Chebyshev-Gauss-Lobatto
+    base_degree: 0
+    N: 6
+    run: 3
+    degree: 6
+    poly_deg: 6
+    epochs_used: 500
+============================================================

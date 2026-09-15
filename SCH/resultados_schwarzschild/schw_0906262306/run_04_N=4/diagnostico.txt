@@ -1,0 +1,53 @@
+============================================================
+  DIAGNÓSTICO POLINOMIAL — Schwarzschild, Modo N=4
+  Re(ω): libre
+============================================================
+
+  w argmin : 0.465452+-1.178477i [ep 72]
+  w avg10% : 0.465452+-1.178477i  s=(0.0000,0.0000)
+  Consist  : ✓
+  Loss PDE : 2.4248e-06
+  Veredicto: PROBABLE (PDE<1e-4)
+
+  Coeficientes:
+    c0 = -3.31925345 + -0.67128313i
+    c1 = 4.54899057 + 0.51771176i
+    c2 = -2.06412883 + -0.84809848i
+    c3 = 1.01206577 + 0.36345562i
+    c4 = -0.31072850 + -0.23593662i
+    c5 = 0.09226970 + 0.08920286i
+    c6 = -0.01476606 + -0.02593265i
+    c7 = 0.00147084 + 0.00341085i
+    c8 = -0.00044842 + 0.00089656i
+    c9 = 0.00038586 + -0.00051173i
+    c10 = -0.00011212 + 0.00008494i
+
+  Barreras Im conocidas: [-0.0927, -0.2813, -0.4791]
+  Tiempo: 10.26 s
+
+  Hiperparámetros:
+    potential: Schwarzschild
+    architecture: Polynomial
+    L: 3.0
+    M: 1.0
+    S: 2.0
+    z0: 0.0
+    zf: 1.0
+    n_train: 200
+    neurons: 0
+    epochs: 1000
+    learning_rate: 0.005
+    minibatch: 1
+    optimizer: Adam+LBFGS
+    activation: N/A (polynomial)
+    device: cpu
+    amp: False
+    losses: ['PDE', 'Anticollapse', 'Barriers']
+    base_degree: 6
+    force_re_zero: False
+    N: 4
+    run: 4
+    degree: 10
+    poly_deg: 10
+    epochs_used: 1000
+============================================================
